@@ -4,6 +4,8 @@
 * [src]((https://github.com/LoriTSentman/CM4-SOM/tree/master/src) source code for the CM4-SOM model (all code is in submodules)
 * [exec]((https://github.com/LoriTSentman/CM4-SOM/tree/master/exec) Makefiles to compile the code 
 * [run]((https://github.com/LoriTSentman/CM4-SOM/tree/master/run) Simple run script
+* [inputs]((https://github.com/LoriTSentman/CM4-SOM/tree/master/inputs) Model input files
+
 
 ## Cloning
 To clone the CM4-SOM model please use the recursive option
@@ -17,31 +19,22 @@ git clone --recursive https://github.com/LoriTSentman/CM4-SOM.git
 
 ## Compiling
 
-### Building the container
-The [container folder](container) provides example Dockerfiles and Signularity
-definition files to use to build AM4 containers using either GCC/GFORTAN or
-Intel oneAPI. There is a script that can be used to build the intel
-singularity containers, and the first step of this script can be used with the
-other GFDL climate models.
-
-
 ### Building from source
-This model was originally compiled and run with the intel16 compiler.
-It is recommended that you compile with an intel compiler.
+This model was initially compiled and run with the intel16 compiler.
 
-Compiling assumes that you have an intel compiler, MPI (impi, mpich,
-openmpi, etc), netcdf, and hdf5 in your LD_LIBRARY_PATH and LIBRARY_PATH.
+Compiling assumes that you have an intel compiler, MPI (impi, MPICH,
+openMPI, etc), NetCDF, and HDF5 in your LD_LIBRARY_PATH and LIBRARY_PATH.
 It is also assumed that nf-config and nc-config are in your path. 
 If you work on a machine with modules, you may need to load these 
 packages into your environment.
 
-Makefiles have been included in the 
+Makefiles are included in the 
 [exec/](https://github.com/LoriTSentman/CM4-SOM/tree/master/exec) folder.
-There are several option for compiling, which can be found in the 
+There are several options for compiling, which can be found in the 
 [template/intel.mk](https://github.com/LoriTSentman/CM4-SOM/blob/master/exec/templates/intel.mk).  
 You may need to edit the template/intel.mk to update the compiler names
-or add any CPPDEF options specific for your system.
-The most common compile with optimizations on and with openmp would be 
+or add any CPPDEF options specific to your system.
+The most common compile with optimizations on and with openMP would be 
 ```bash
 cd exec
 make OPENMP=on
