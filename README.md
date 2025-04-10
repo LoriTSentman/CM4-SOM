@@ -1,18 +1,18 @@
 # GFDL Coupled Model 4 Slab Ocean Configuration
 
 ## What Is Included
-* [src]((https://github.com/NOAA-GFDL/CM4-SOM/tree/master/src) source code for the CM4-SOM model (all code is in submodules)
-* [exec]((https://github.com/NOAA-GFDL/CM4-SOM/tree/master/exec) Makefiles to compile the code 
-* [run]((https://github.com/NOAA-GFDL/CM4-SOM/tree/master/run) Simple run script
+* [src]((https://github.com/LoriTSentman/CM4-SOM/tree/master/src) source code for the CM4-SOM model (all code is in submodules)
+* [exec]((https://github.com/LoriTSentman/CM4-SOM/tree/master/exec) Makefiles to compile the code 
+* [run]((https://github.com/LoriTSentman/CM4-SOM/tree/master/run) Simple run script
 
 ## Cloning
 To clone the CM4-SOM model please use the recursive option
 ```bash
-git clone --recursive git@github.com:NOAA-GFDL/CM4-SOM.git 
+git clone --recursive git@github.com:LoriTSentman/CM4-SOM.git 
 ```
 or 
 ```bash
-git clone --recursive https://github.com/NOAA-GFDL/CM4-SOM.git
+git clone --recursive https://github.com/LoriTSentman/CM4-SOM.git
 ```
 
 ## Compiling
@@ -36,9 +36,9 @@ If you work on a machine with modules, you may need to load these
 packages into your environment.
 
 Makefiles have been included in the 
-[exec/](https://github.com/NOAA-GFDL/CM4-SOM/tree/master/exec) folder.
+[exec/](https://github.com/LoriTSentman/CM4-SOM/tree/master/exec) folder.
 There are several option for compiling, which can be found in the 
-[template/intel.mk](https://github.com/NOAA-GFDL/CM4-SOM/blob/master/exec/templates/intel.mk).  
+[template/intel.mk](https://github.com/LoriTSentman/CM4-SOM/blob/master/exec/templates/intel.mk).  
 You may need to edit the template/intel.mk to update the compiler names
 or add any CPPDEF options specific for your system.
 The most common compile with optimizations on and with openmp would be 
@@ -64,7 +64,7 @@ gaea (NOAA RDHPCS cray system)
 module load intel
 module load cray-netcdf
 module load cray-hdf5
-git clone --recursive git@github.com:NOAA-GFDL/CM4-SOM.git
+git clone --recursive git@github.com:LoriTSentman/CM4-SOM.git
 cd CM4-SOM/exec
 make MKL_LIBS="none" OPENMP=y
 ```
@@ -72,7 +72,7 @@ Compiling on orion (MSU)
 ```bash
 module load intel impi netcdf hdf5
 export LIBRARY_PATH=${LIBRARY_PATH}:${LD_LIBRARY_PATH}
-git clone --recursive git@github.com:NOAA-GFDL/CM4-SOM.git
+git clone --recursive git@github.com:LoriTSentman/CM4-SOM.git
 cd CM4-SOM/exec
 make OPENMP=on
 ```
