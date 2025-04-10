@@ -79,7 +79,8 @@ make OPENMP=on
 
 ## Model inputs 
 
-Model example input files are provided in input/ including datasets, namelists, diagnostics, field table, data table, etc.
+Example model input files are provided as a tar file in input/ including datasets, namelists, diagnostics, field table, data table, etc.
+These files should be unpackaged and located in INPUT/ in the working directory when running the model. 
 
 
 ## Disclaimer
