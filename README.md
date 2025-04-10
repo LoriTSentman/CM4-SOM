@@ -77,6 +77,11 @@ cd CM4-SOM/exec
 make OPENMP=on
 ```
 
+## Model inputs 
+
+Model example input files are provided in input/ including datasets, namelists, diagnostics, field table, data table, etc.
+
+
 ## Disclaimer
 
 The United States Department of Commerce (DOC) GitHub project code is provided
